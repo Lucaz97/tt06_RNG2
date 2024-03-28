@@ -49,7 +49,6 @@ module tt_um_lucaz97_rng_tests (
       .epsilon_rsc_dat(ui_in[0]),
       .epsilon_triosy_lz()
     );
-    overlapping
 
    
   // All output pins must be assigned. If not used, assign to 0.
