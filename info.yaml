@@ -15,7 +15,17 @@ project:
   
   # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
   source_files:        
-    - "project.v"
+    - "tt_um_lucaz97_rng_tests.v"
+    - "ccs_out_v1.v"
+    - "ccs_in_v1.v"
+    - "mgc_io_sync_v2.v"
+    - "serial_core.v"
+    - "serial.v"
+    - "longest_run_of_ones_core.v"
+    - "longest_run_of_ones.v"
+    - "overlapping_core.v"
+    - "overlapping.v"
+    
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:

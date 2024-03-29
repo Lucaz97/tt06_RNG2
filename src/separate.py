@@ -1,7 +1,7 @@
 import re
 
 # Path to the Verilog file
-verilog_file_path = 'project.v'
+verilog_file_path = '/home/lcollini/tt06_RNG2/src/project.v'
 
 # Function to extract modules from the Verilog file and save them into separate files
 def separate_modules(file_path):
@@ -26,7 +26,7 @@ def separate_modules(file_path):
             module_name = module_name_match.group(1)
             
             # Save the module content into a separate file
-            module_file_name = f'modules/{module_name}.v'
+            module_file_name = f'/home/lcollini/tt06_RNG2/src/{module_name}.v'
             with open(module_file_name, 'w') as mod_file:
                 mod_file.write(module)
 
@@ -34,13 +34,17 @@ def separate_modules(file_path):
             module_files[module_name] = module_file_name
 
     # Create a master file that includes all module files
-    master_file_path = f'modules/master_project.v'
-    with open(master_file_path, 'w') as master_file:
-        for module_name, module_file_name in module_files.items():
-            master_file.write(f'`include "{module_file_name}"\n')
+    # master_file_path = f'/home/lcollini/tt06_RNG2/src/modules/master_project.v'
+    # with open(master_file_path, 'w') as master_file:
+    #     for module_name, module_file_name in module_files.items():
+    #         master_file.write(f'`include "{module_file_name}"\n')
+    for file  in module_files.keys():
+        print('- "' + file + '.v"')
 
-    return module_files.keys(), master_file_path
+    print('.v '.join(module_files.keys()))
+
+    return module_files.keys()
 
 # Separate the modules and create the master file
-module_names, master_file_path = separate_modules(verilog_file_path)
-module_names, master_file_path
+module_names  = separate_modules(verilog_file_path)
+module_names
