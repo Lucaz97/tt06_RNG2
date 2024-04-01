@@ -9,7 +9,7 @@ module tt_um_lucaz97_rng_tests (
     input  wire       rst_n     // reset_n - low to reset
 );
 
-  serial serial_inst (
+    serial serial_inst (
       .clk(clk),
       .rst_n(rst_n),
       .is_random_rsc_dat(uo_out[0]),
@@ -43,9 +43,18 @@ module tt_um_lucaz97_rng_tests (
       .epsilon_triosy_lz()
     );
 
+    non_overlapping non_overlapping_inst(
+      .clk(clk),
+      .rst_n(rst_n),
+      .is_random_rsc_dat(uo_out[6]),
+      .is_random_triosy_lz(),
+      .valid_rsc_dat(uo_out[7]),
+      .valid_triosy_lz(),
+      .epsilon_rsc_dat(ui_in[0]),
+      .epsilon_triosy_lz()
+    );
    
   // All output pins must be assigned. If not used, assign to 0.
-  assign uo_out[7:6] = 0;  // Example: ou_out is the sum of ui_in and uio_in
   assign uio_out = 0;
   assign uio_oe  = 0;
 

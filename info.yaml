@@ -25,7 +25,7 @@ project:
     - "longest_run_of_ones.v"
     - "overlapping_core.v"
     - "overlapping.v"
-    
+    - "non_overlapping".v
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
