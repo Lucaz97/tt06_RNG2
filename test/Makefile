@@ -5,7 +5,7 @@
 SIM ?= icarus
 TOPLEVEL_LANG ?= verilog
 SRC_DIR = $(PWD)/../src
-PROJECT_SOURCES = tt_um_lucaz97_rng_tests.v ccs_out_v1.v ccs_in_v1.v mgc_io_sync_v2.v serial_core.v serial.v longest_run_of_ones_core.v longest_run_of_ones.v overlapping_core.v overlapping.v
+PROJECT_SOURCES = tt_um_lucaz97_rng_tests.v ccs_out_v1.v ccs_in_v1.v mgc_io_sync_v2.v serial_core.v serial.v longest_run_of_ones_core.v longest_run_of_ones.v overlapping_core.v overlapping.v non_overlapping.v
 
 ifneq ($(GATES),yes)
 
